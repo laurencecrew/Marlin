@@ -103,9 +103,10 @@
   #define HOTEND7_BETA                 3950    // Beta value
 #endif
 
+// LC: PANR103395-408 NTC 10k Ring Lug Thermistor Digikey 570-1066-ND
 #if TEMP_SENSOR_BED == 1000
   #define BED_PULLUP_RESISTOR_OHMS     4700    // Pullup resistor
-  #define BED_RESISTANCE_25C_OHMS      100000  // Resistance at 25C
+  #define BED_RESISTANCE_25C_OHMS      10000  // Resistance at 25C
   #define BED_BETA                     3950    // Beta value
 #endif
 

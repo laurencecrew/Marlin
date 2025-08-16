@@ -56,7 +56,7 @@
 //
 // Servos
 //
-#define SERVO0_PIN                         P2_00
+//#define SERVO0_PIN                         P2_00  // LC: This is now job fan. Disable?
 
 //
 // TMC StallGuard DIAG pins

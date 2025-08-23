@@ -340,7 +340,7 @@
  * Thermal Protection parameters for the bed are just as above for hotends.
  */
 #if TEMP_SENSOR_BED && ENABLED(THERMAL_PROTECTION_BED)
-  #define THERMAL_PROTECTION_BED_PERIOD        20 // (seconds)
+  #define THERMAL_PROTECTION_BED_PERIOD        60 // (seconds) // LC: increased from 20 to stop false positives
   #define THERMAL_PROTECTION_BED_HYSTERESIS     2 // (°C)
 
   /**

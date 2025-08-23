@@ -710,11 +710,11 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    // LC: E3D Chimera E0 autotuned (M303 C10 E0 S220 Utrue)
+    // LC: E3D Chimera E0 + silicone sock autotuned (M303 E0 C8 S210)
     // Note: Do this with job fan on M106 S255
-    #define DEFAULT_Kp 47.71
-    #define DEFAULT_Ki 5.88
-    #define DEFAULT_Kd 96.83
+    #define DEFAULT_Kp 49.94
+    #define DEFAULT_Ki 7.52
+    #define DEFAULT_Kd 82.91
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current

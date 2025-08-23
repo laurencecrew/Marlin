@@ -819,10 +819,15 @@
   //#define DEFAULT_bedKi   0.023
   ///#define DEFAULT_bedKd 305.4
 
-  // LC: PCB Heatbed Aluminium V3 Autotuned 6/9/2020 (M303 C3 E-1 S100 Utrue)
-  #define DEFAULT_bedKp 64.96
-  #define DEFAULT_bedKi 8.23
-  #define DEFAULT_bedKd 341.58
+  // LC: PCB Heatbed Aluminium V3 Autotuned 23/8/25 (M303 E-1 C8 S70) uncovered
+  #define DEFAULT_bedKp 126.98
+  #define DEFAULT_bedKi 8.16
+  #define DEFAULT_bedKd 1318.08
+
+  // LC: Previous settings from 2020 at 100C
+  //#define DEFAULT_bedKp 64.96
+  //#define DEFAULT_bedKi 8.23
+  //#define DEFAULT_bedKd 341.58
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else

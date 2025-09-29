@@ -819,10 +819,15 @@
   //#define DEFAULT_bedKi   0.023
   ///#define DEFAULT_bedKd 305.4
 
-  // LC: PCB Heatbed Aluminium V3 Autotuned 23/8/25 (M303 E-1 C8 S70) uncovered
-  #define DEFAULT_bedKp 126.98
-  #define DEFAULT_bedKi 8.16
-  #define DEFAULT_bedKd 1318.08
+  // LC: PCB Heatbed Aluminium V3 Autotuned 70C 23/8/25 (M303 E-1 C8 S70) uncovered
+  //#define DEFAULT_bedKp 126.98
+  //#define DEFAULT_bedKi 8.16
+  //#define DEFAULT_bedKd 1318.08
+
+  // LC: PCB Heatbed Aluminium V3 Autotuned 100C 23/8/25 (M303 E-1 C8 S100) uncovered
+  #define DEFAULT_bedKp 152.98
+  #define DEFAULT_bedKi 30.57
+  #define DEFAULT_bedKd 510.46
 
   // LC: Previous settings from 2020 at 100C
   //#define DEFAULT_bedKp 64.96
@@ -2399,8 +2404,7 @@
 
 // Homing speeds (linear=mm/min, rotational=°/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (100*60), (60*60), (6*60) } // LC: Y axis crashes into switch at 133
-//#define HOMING_FEEDRATE_MM_M { (150*60), (150*60), (10*60) } // LC maybe don't want max speed as it might crash into ensdstops!
+#define HOMING_FEEDRATE_MM_M { (100*60), (80*60), (6*60) } // LC: Y axis crashes into switch at 133mm/s
 
 // Edit homing feedrates with M210 and MarlinUI menu items
 #define EDITABLE_HOMING_FEEDRATE // LC: enabled this

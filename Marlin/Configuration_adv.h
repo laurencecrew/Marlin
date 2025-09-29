@@ -346,7 +346,7 @@
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD                60 // (seconds)
+  #define WATCH_BED_TEMP_PERIOD                120 // (seconds) // LC: increased from 60s as heating is slow near 100C
   #define WATCH_BED_TEMP_INCREASE               2 // (°C)
 #endif
 
@@ -2368,7 +2368,7 @@
   #if ENABLED(DISTINCT_E_FACTORS)
     #define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder
   #else
-    #define ADVANCE_K 1.1        // (mm) Compression length applying to all extruders // LC: 
+    #define ADVANCE_K 0.45 // 1.1        // (mm) Compression length applying to all extruders // LC: for speeds up to ~ 80mm/s. Needs to be lower for higer speeds e.g. K=0.65 for 150mm/s
   #endif
   //#define ADVANCE_K_EXTRA       // Add a second linear advance constant, configurable with M900 L.
   //#define LA_DEBUG              // Print debug information to serial during operation. Disable for production use.
@@ -2625,8 +2625,8 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-//#define MINIMUM_STEPPER_POST_DIR_DELAY 650
-//#define MINIMUM_STEPPER_PRE_DIR_DELAY 650
+#define MINIMUM_STEPPER_POST_DIR_DELAY 1500 // LC: Added this due to missing steps when printing small circles
+#define MINIMUM_STEPPER_PRE_DIR_DELAY 1500 // LC: Added this
 
 /**
  * Minimum stepper driver pulse width (in ns)
